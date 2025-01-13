@@ -100,10 +100,16 @@
   ];
 
   # Set up Graphics Card
-  hardware.graphics.extraPackages = with pkgs; [ 
-    intel-media-sdk 
-    intel-media-driver
-  ];
+  hardware.graphics  = {
+    extraPackages = with pkgs; [ 
+      intel-media-sdk 
+      intel-media-driver
+    ];
+    enable = true;
+  };
+
+  # System76 drivers
+  hardware.system76.enableAll = true;
   
   # Setup Hyprland
   programs.hyprland = {
