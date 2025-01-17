@@ -4,8 +4,8 @@
 	services.hyprpaper = {
 		enable = true;
 		settings = {
-			preload = config.desktop.wallpaper-path;
-			wallpaper = config.desktop.wallpaper-path;
+			preload = config.desktop.wallpaperPath;
+			wallpaper = config.desktop.wallpaperPath;
 			splash = false;
 		};
 	};
