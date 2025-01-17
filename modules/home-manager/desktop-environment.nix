@@ -36,7 +36,7 @@
       };
       wallpaper-path = mkOption {
         type = types.path;
-      }
+      };
     };
   };
 
