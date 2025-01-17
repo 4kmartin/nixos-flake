@@ -27,7 +27,7 @@
   ];
 
   # Set wallpaper
-  snowcrash.wallpaper-path = ./wallpaper.jpg;
+  desktop.wallpaper-path = ./wallpaper.jpg;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

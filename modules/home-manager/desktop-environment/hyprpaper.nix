@@ -1,13 +1,15 @@
 { lib, config, ... }:
 
 {
-  options.snowcrash.wallpaper-path = lib.mkOption {};
+  options.desktop.wallpaper-path = lib.mkOption {
+		type=types.path; 
+	};
 	config = {
 		services.hyprpaper = {
 			enable = true;
 			settings = {
-				preload = config.wallpaper-path;
-				wallpaper = config.wallpaper-path;
+				preload = config.desktop.wallpaper-path;
+				wallpaper = config.desktop.wallpaper-path;
 				splash = false;
 			};
 		};
