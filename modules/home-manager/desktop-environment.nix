@@ -34,6 +34,9 @@
         type = types.str;
         default = "JetBrainsMono Nerd Font Mono";
       };
+      wallpaper-path = mkOption {
+        type = types.path;
+      }
     };
   };
 
