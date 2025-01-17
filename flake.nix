@@ -11,7 +11,14 @@
     hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs, stylix, home-manager, hyprland, ... }@inputs: 
+  outputs = { 
+    self, 
+    nixpkgs, 
+    stylix, 
+    home-manager, 
+    hyprland, 
+    ... 
+  }@inputs: 
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
