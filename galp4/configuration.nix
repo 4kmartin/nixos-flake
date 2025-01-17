@@ -47,11 +47,11 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -100,12 +100,15 @@
   ];
 
   # Set up Graphics Card
-  hardware.graphics  = {
-    extraPackages = with pkgs; [ 
-      intel-media-sdk 
-      intel-media-driver
-    ];
-    enable = true;
+  hardware = {
+    graphics  = {
+      extraPackages = with pkgs; [ 
+        intel-media-sdk 
+        intel-media-driver
+        intel-compute-runtime
+      ];
+      enable = true;
+    };
   };
 
   # System76 drivers
@@ -115,7 +118,14 @@
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland.override { legacyRenderer = true; };
     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
+
+  # Setup Cachix
+  nix.settings = {
+    substituters = [ "https://hyprland.cachix.org" ];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
 
