@@ -21,6 +21,9 @@
       type = types.str;
       default = "#404552";
     };
+    wallpaperPath = mkOption {
+      type = types.path;
+    };
     text = {
       color = mkOption {
         type = types.str;
@@ -33,9 +36,6 @@
       mono-font = mkOption {
         type = types.str;
         default = "JetBrainsMono Nerd Font Mono";
-      };
-      wallpaperPath = mkOption {
-        type = types.path;
       };
     };
   };
