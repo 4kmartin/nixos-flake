@@ -29,7 +29,7 @@
       inherit pkgs;
 
       modules = [
-        ./galgp19/home.nix
+        ./galp4/home.nix
         {
           wayland.windowManager.hyprland = {
             enable = true;
