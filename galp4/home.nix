@@ -25,8 +25,14 @@
     pkgs.inkscape
   ];
 
+  home.file."wallpaper" = {
+    target = ".config/wallpaper.jpg";
+    source = ../assets/wallpaper.jpg;
+    enable = true;
+  };
+
   # Set wallpaper
-  desktop.wallpaperPath = ../assets/wallpaper.jpg;
+  desktop.wallpaperPath = "~/.config/wallpaper.jpg";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
