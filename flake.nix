@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "a flake full of hacking tools";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -34,7 +34,6 @@
     };
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
-
       modules = [
         ./galp4/home.nix
         {
@@ -44,7 +43,6 @@
           };
         }
       ];
-      
     };
   };
 }
