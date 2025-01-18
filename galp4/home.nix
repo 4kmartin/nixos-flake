@@ -2,8 +2,7 @@
 
 {
   imports = [
-    ../modules/home-manager/oxide-shell.nix
-    ../modules/home-manager/desktop-environment.nix
+    ../modules/home-manager/default.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

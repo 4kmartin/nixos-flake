@@ -3,7 +3,7 @@
 # version = "0.93.0"
 
 def create_left_prompt [] {
-    let dir = match (do --ignore-shell-errors { $env.PWD | path relative-to $nu.home-path }) {
+    let dir = match (do --ignore-errors { $env.PWD | path relative-to $nu.home-path }) {
         null => $env.PWD
         '' => '~'
         $relative_pwd => ([~ $relative_pwd] | path join)
@@ -51,7 +51,7 @@ $env.PROMPT_MULTILINE_INDICATOR = {|| "::: " }
 # This can be useful if you have a 2-line prompt and it's taking up a lot of space
 # because every command entered takes up 2 lines instead of 1. You can then uncomment
 # the line below so that previously entered commands show with a single `🚀`.
-# $env.TRANSIENT_PROMPT_COMMAND = {|| "🚀 " }
+$env.TRANSIENT_PROMPT_COMMAND = {|| "❯ " }
 # $env.TRANSIENT_PROMPT_INDICATOR = {|| "" }
 # $env.TRANSIENT_PROMPT_INDICATOR_VI_INSERT = {|| "" }
 # $env.TRANSIENT_PROMPT_INDICATOR_VI_NORMAL = {|| "" }

@@ -1,10 +1,10 @@
 {config, pkgs, ... }:
 let 
-  font = config.desktop.text.mono-font;
-  primary-color = config.desktop.primary-color;
-  accent-color = config.desktop.accent-color;
-  contrast-color = config.desktop.contrast-color;
-  text-color = config.desktop.text.color;
+  font = config.text.mono-font;
+  primary-color = config.color.primary-color;
+  accent-color = config.color.accent-color;
+  contrast-color = config.color.contrast-color;
+  text-color = config.text.color;
   border-color = "solid black";
 in
 {

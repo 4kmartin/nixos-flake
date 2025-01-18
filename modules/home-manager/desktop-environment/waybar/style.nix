@@ -1,10 +1,10 @@
 { config, ... }:
 let
-  background = config.desktop.accent-color;
-  background_light = config.desktop.contrast-color;
-  background_dark = config.desktop.primary-color;
-  font = config.desktop.text.normal-font;
-  text-color = config.desktop.text.color;
+  background = config.color.accent-color;
+  background_light = config.color.contrast-color;
+  background_dark = config.color.primary-color;
+  font = config.text.normal-font;
+  text-color = config.text.color;
   border-color= "#000000";
 in
 {

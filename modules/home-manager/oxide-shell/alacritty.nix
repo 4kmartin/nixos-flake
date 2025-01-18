@@ -4,13 +4,13 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      shell = {
+      terminal.shell = {
         program = "nu";
         args = ["-l"];
       };
       font = {
         normal = {
-          family = "JetBrainsMono Nerd Font Mono";
+          family = config.text.mono-font;
         };
       };
       window = {
