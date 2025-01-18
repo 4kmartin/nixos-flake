@@ -16,7 +16,7 @@
 
   # Stylix
   stylix.enable = true;
-  stylix.image = ./wallpaper.jpg;
+  stylix.image = ../assets/wallpaper.jpg;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

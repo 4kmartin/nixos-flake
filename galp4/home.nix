@@ -26,7 +26,7 @@
   ];
 
   # Set wallpaper
-  desktop.wallpaperPath = ./wallpaper.jpg;
+  desktop.wallpaperPath = ../assets/wallpaper.jpg;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
