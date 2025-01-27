@@ -15,5 +15,7 @@
 		python312Packages.pip				
     git
 		docker
+	  nixd
+    nil
   ];
 }
