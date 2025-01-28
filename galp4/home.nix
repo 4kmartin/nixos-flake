@@ -1,4 +1,4 @@
-{  pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -42,5 +42,10 @@
   nix = {
     package = pkgs.nix;
     settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+
+  stylix = {
+    enable = true;
+    image = ../assets/wallpaper.jpg;  
   };
 }

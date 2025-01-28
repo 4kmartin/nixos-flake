@@ -34,8 +34,12 @@
     };
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
+      extraSpecialArgs = {
+        inherit inputs;
+      };
       modules = [
         ./galp4/home.nix
+        stylix.homeManagerModules.stylix
         {
           wayland.windowManager.hyprland = {
             enable = true;
