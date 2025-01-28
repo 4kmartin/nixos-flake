@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 	imports = [
@@ -17,6 +17,8 @@
 		zoom-us
 		pulseaudio
 		mpv
+		htop
+		neofetch
 	];
 
 	virtualisation = {
