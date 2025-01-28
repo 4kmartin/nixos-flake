@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let 
-  terminal = "alacritty";
+  terminal = "kitty";
   file_explorer = "dolphin";
   menu = "wofi --show drun";
 in
