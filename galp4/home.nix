@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{  pkgs, ... }:
 
 {
   imports = [
@@ -37,7 +37,7 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  stylix.enable = true;
+  # inputs.stylix.enable = true;
 
   nix = {
     package = pkgs.nix;

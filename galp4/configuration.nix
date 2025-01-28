@@ -2,11 +2,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware-configuration.nix
       ../modules/nixos/default.nix
     ];
@@ -15,8 +15,11 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Stylix
-  stylix.enable = true;
-  stylix.image = ../assets/wallpaper.jpg;
+  stylix = {
+    enable = true;
+    image = ../assets/wallpaper.jpg;
+    polarity = "dark";
+  };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

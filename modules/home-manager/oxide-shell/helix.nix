@@ -1,4 +1,4 @@
-{config, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.helix = {
@@ -20,11 +20,11 @@
             "nixd"
             "nil"
           ];
-        };
+        }
         {
           name = "markdown";
           soft-wrap.enable = true;
-        };
+        }
       ];
       language-server.nixd = {
         command = "nixd";
