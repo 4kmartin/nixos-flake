@@ -16,7 +16,6 @@ in
     }
 
     window#waybar {
-        background-color: ${background};
         border-bottom: 0px solid ${border-color};
         background: transparent;
         transition-property: background-color;

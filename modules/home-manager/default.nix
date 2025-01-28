@@ -1,6 +1,7 @@
 { lib, config, pkgs, ... }:
 let
   colors = config.lib.stylix.colors.withHashtag;
+  fonts = config.stylix.fonts;
 in
 {
   imports = [
@@ -15,7 +16,7 @@ in
       }; 
       accent-color = mkOption {
         type = types.str;
-        default = colors.base01;
+        default = colors.base0A;
       };
       contrast-color = mkOption {
         type = types.str;
@@ -25,15 +26,15 @@ in
     text = {
       color = mkOption {
         type = types.str;
-        default = "#ffffff";
+        default = colors.base0C;
       };
       normal-font = mkOption {
         type = types.str;
-        default = "sans";
+        default = fonts.sansSerif.name;
       };
       mono-font = mkOption {
         type = types.str;
-        default = "JetBrainsMono Nerd Font Mono";
+        default = fonts.monospace.name;
       };
     }; 
   };
@@ -57,6 +58,10 @@ in
         };
       };
       
+      opacity = {
+        desktop = 0.0;
+        terminal = 0.9;
+      };
     };
     
     programs.kitty.enable = true;
