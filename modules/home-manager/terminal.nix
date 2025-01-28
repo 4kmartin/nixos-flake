@@ -1,10 +1,11 @@
 { lib, pkgs, config, ... } :
 {
 	imports = [
-		./oxide-shell/helix.nix
-		./oxide-shell/alacritty.nix
-		./oxide-shell/nushell.nix
-		./oxide-shell/starship.nix
+		./terminal/helix.nix
+		./terminal/alacritty.nix
+		./terminal/nushell.nix
+		./terminal/starship.nix
+		./terminal/kitty.nix
 	];
 
 	options.shell = with lib; {

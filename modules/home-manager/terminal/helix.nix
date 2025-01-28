@@ -3,7 +3,7 @@
 {
   programs.helix = {
     settings = {
-      theme = "tokyonight";
+      # theme = "tokyonight";
       editor = {
         cursor-shape = {
           insert = "bar";

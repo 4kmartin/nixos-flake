@@ -8,16 +8,16 @@
         program = "nu";
         args = ["-l"];
       };
-      font = {
-        normal = {
-          family = config.text.mono-font;
-        };
-      };
+      # font = {
+      #   normal = {
+      #     family = config.text.mono-font;
+      #   };
+      # };
       window = {
         dynamic_title = false;
         title = "Terminal";
         blur = true;
-        opacity = 0.8;
+        # opacity = 0.8;
       };
     };
   };

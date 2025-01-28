@@ -1,11 +1,11 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 let
-  colors = config.lib.stylix.colors;
+  colors = config.lib.stylix.colors.withHashtag;
 in
 {
   imports = [
     ./desktop-environment.nix
-    ./oxide-shell.nix
+    ./terminal.nix
   ];
   options = with lib; {
     color = {
@@ -36,5 +36,29 @@ in
         default = "JetBrainsMono Nerd Font Mono";
       };
     }; 
+  };
+  config = {
+  
+    stylix = {
+      polarity = "dark";
+  
+      fonts = {
+        serif = {
+          package = pkgs.dejavu_fonts;
+          name = "DejaVu Serif";
+        };
+        sansSerif = {
+          package = pkgs.dejavu_fonts;
+          name = "DejaVu Sans";
+        };
+        monospace = {
+          package = pkgs.nerd-fonts.jetbrains-mono;
+          name = "JetBrainsMono Nerd Font Mono";
+        };
+      };
+      
+    };
+    
+    programs.kitty.enable = true;
   };
 }
