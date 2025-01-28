@@ -3,6 +3,8 @@
 {
   programs.kitty = {
     enable = true;
-    shell = "nu";
+    settings = {
+      shell = "nu";
+    };
   };
 }
