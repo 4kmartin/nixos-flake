@@ -14,11 +14,11 @@
 	environment.systemPackages = with pkgs; [
 		zip
 		unzip
-		zoom-us
 		pulseaudio
 		mpv
 		htop
 		neofetch
+		spotify-tui
 	];
 
 	virtualisation = {
