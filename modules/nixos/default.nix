@@ -18,7 +18,7 @@
 		mpv
 		htop
 		neofetch
-		spotify-tui
+		spotify
 	];
 
 	virtualisation = {
