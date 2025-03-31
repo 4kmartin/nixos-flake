@@ -9,6 +9,7 @@
 		./devops-tools.nix
 		# ./peripheral.nix
 		./screencapture.nix
+		./writing.nix
 	];
 
 	environment.systemPackages = with pkgs; [
