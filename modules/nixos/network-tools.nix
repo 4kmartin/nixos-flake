@@ -18,4 +18,6 @@
   ];
 
 	services.resolved.enable = true;
+
+	environment.etc.hosts.mode = "0644";
 }
