@@ -3,6 +3,7 @@
 {
 	environment.systemPackages = with pkgs; [
     gcc
+		gdb
     rustup
     cmake
     python312
