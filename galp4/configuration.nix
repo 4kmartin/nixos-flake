@@ -19,7 +19,7 @@
     enable = true;
     image = ../assets/wallpaper.jpg;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
   };
 
   # Bootloader.

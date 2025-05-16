@@ -2,8 +2,6 @@
 
 {
   imports = [
-    ./hacking-tools/htb.nix
-    ./hacking-tools/pnpt.nix
     ./hacking-tools/hashcat.nix
   ];
 
