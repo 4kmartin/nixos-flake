@@ -22,7 +22,7 @@
 
       # // Modules Center
       "modules-center"= [
-        "hyprlnd/workspaces"
+        "hyprland/workspaces"
       ];
 
       # // Modules Right
@@ -44,6 +44,12 @@
         "all-outputs"= true;
         "persistent-workspaces"= {
           "*"= 5;
+        };
+        "format" = "";
+        "format-icons" = {
+          "urgent" = "";
+          "active" = "";
+          "default" = "";
         };
       };
 

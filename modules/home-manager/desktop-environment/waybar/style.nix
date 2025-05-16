@@ -5,7 +5,7 @@ let
   background_dark = config.color.primary-color;
   font = config.text.normal-font;
   text-color = config.text.color;
-  border-color= "#000000";
+  border-color= config.color.accent-color;
 in
 {
   programs.waybar.style = ''
@@ -26,8 +26,8 @@ in
      * Workspaces 
      * ----------------------------------------------------- */
 
-    #workspaces {
-        background: ${background};
+   #workspaces {
+        background: ${background_light};
         margin: 2px 1px 3px 1px;
         padding: 1px;
         border-radius: 15px;
@@ -45,7 +45,7 @@ in
         border-radius: 15px;
         border: 0px;
         color: ${text-color};
-        background-color: ${background};
+        background-color: ${background_dark};
         transition: all 0.3s ease-in-out;
         opacity: 0.4;
     }
@@ -59,7 +59,7 @@ in
         opacity:1.0;
     }
 
-    #workspaces button:hover {
+    workspaces button:hover {
         color: ${text-color};
         background: ${background};
         border-radius: 15px;

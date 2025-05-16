@@ -1,59 +1,77 @@
-{config, pkgs, ... }:
+{config, ... }:
 let 
   font = config.text.mono-font;
-  primary-color = config.color.primary-color;
-  accent-color = config.color.accent-color;
-  contrast-color = config.color.contrast-color;
   text-color = config.text.color;
-  border-color = "solid black";
+  background = config.color.contrast-color;
+  border-color = config.color.accent-color;
 in
 {
   programs.wofi = {
     enable = true;
-    # style = ''
-    # *{
-    #   font-family: ${font}; 
-    # }
-    
-    # window {
-    #   background-color: ${accent-color};
-    # }
-    
-    # #input {
-    #   margin: 5px;
-    #   border-radius: 0px;
-    #   border: none;
-    #   border-bottom: 3px ${border-color};
-    #   background-color: ${primary-color};
-    #   color: ${text-color};
-    # }
+    style = ''
+    * {
+        font-family: ${font};
+        color: ${text-color};
+        background: transparent;
+      }
 
-    # #inner-box {
-    #   background-color: ${primary-color};
-    # }
+      #window {
+        background: ${background};
+        margin: auto;
+        padding: 10px;
+        border-radius: 20px;
+        border: 5px solid ${border-color};
+      }
 
-    # #outer-box {
-    #   margin: 5px;
-    #   padding: 20px;
-    #   background-color: ${primary-color};
-    # }
+      #input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+      }
 
-    # #scroll {}
+      #outer-box {
+        padding: 20px;
+      }
 
-    # #text {
-    #   padding: 5px;
-    #   color: ${text-color};
-    # }
+      #img {
+        margin-right: 6px;
+      }
 
-    # #entry:nth-child(even) {
-    #   background-color: ${contrast-color};
-    # }
+      #entry {
+        padding: 10px;
+        border-radius: 15px;
+      }
 
-    # #entry:selected {
-    #   background-color: ${accent-color};
-    # }
+      #entry:selected {
+        background-color: ${background};
+      }
 
-    # #text:selected {}
-    # '';
+      #text {
+        margin: 2px;
+      }
+    '';
+
+    settings = {
+      hide_scroll = true;
+      show = "drun";
+      width = "30%";
+      lines = "8";
+      line_wrap = "word";
+      term = "kitty";
+      allow_markup = true;
+      always_parse_args = false;
+      show_all = true;
+      print_command = true;
+      layer = "overlay";
+      allow_images = true;
+      sort_order = "alphabetical";
+      gtk_dark = true;
+      prompt = "";
+      image_size = "20";
+      display_generic = false;
+      location = "center";
+      key_expand = "Tab";
+      insensitive = false;
+    };
   };
 }
