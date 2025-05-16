@@ -60,7 +60,7 @@ in
 
         blur = {
           enabled = true;
-          size = 10;
+          size = 5;
           passes = 3;
           new_optimizations = true;
           ignore_opacity = true;
