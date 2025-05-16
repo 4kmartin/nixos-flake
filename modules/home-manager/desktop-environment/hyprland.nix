@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 let 
   terminal = "kitty";
   file_explorer = "dolphin";
@@ -60,8 +60,10 @@ in
 
         blur = {
           enabled = true;
-          size = 3;
-          passes = 1;
+          size = 10;
+          passes = 3;
+          new_optimizations = true;
+          ignore_opacity = true;
 
           vibrancy = 0.1696;
         };
