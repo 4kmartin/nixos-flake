@@ -1,4 +1,4 @@
-{ config, pkgs, ... } :
+{ ... } :
 
 {
   programs.nushell = {
@@ -33,6 +33,7 @@
        append /usr/bin/env
        )
        $env.EDITOR = (which hx | get path | to text)
+       alias cls = clear
        '';
     shellAliases = {
       vi = "hx";
