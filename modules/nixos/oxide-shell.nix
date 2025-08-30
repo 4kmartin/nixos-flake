@@ -8,5 +8,8 @@
     nushell
     zellij
     bat
+    ripgrep
+    fzf
+    zoxide
   ];
 }
