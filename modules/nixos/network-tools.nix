@@ -2,6 +2,7 @@
 
 {
 	environment.systemPackages = with pkgs; [
+		ntp
     nmap
 		curl
 		transmission_4-gtk
