@@ -63,10 +63,6 @@
     variant = "";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
   # sound.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -131,6 +127,17 @@
     substituters = [ "https://hyprland.cachix.org" ];
     trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
+
+  # Add Printers
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      hplip
+    ];
+  };
+
+  
+  
 
 
   # This value determines the NixOS release from which the default

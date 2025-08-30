@@ -1,6 +1,6 @@
 { ... }:
 let 
-  terminal = "kitty";
+  terminal = "alacritty";
   file_explorer = "dolphin";
   menu = "wofi --show drun";
 in
