@@ -1,7 +1,8 @@
-{config, pkgs, ... } :
+{ pkgs, ... } :
 
 {
   environment.systemPackages = with pkgs; [
+    yazi
     helix
     alacritty
     starship

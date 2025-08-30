@@ -9,6 +9,8 @@
 
   environment.systemPackages = with pkgs; [
     john
+    mitmproxy
+    mitm6
     burpsuite
     python312Packages.impacket
     metasploit
