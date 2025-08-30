@@ -31,6 +31,8 @@
        split row (char esep) |
        prepend /home/myuser/.apps |
        append /usr/bin/env
+
+       $env.EDITOR = (which hx)
        )
        '';
     shellAliases = {

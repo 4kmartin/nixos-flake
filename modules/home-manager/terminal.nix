@@ -35,9 +35,15 @@
 			# DroidSansMono
 			jetbrains-mono
 	  ];
-		programs.zoxide = {
-			enable = true;
-			enableNushellIntegration = true;
+		programs = {
+			zoxide = {
+				enable = true;
+				enableNushellIntegration = true;
+			};
+			yazi = {
+				enable = true;
+				enableNushellIntegration = true;
+			};
 		};
 	};
 }
