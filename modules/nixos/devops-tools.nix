@@ -14,6 +14,7 @@
 		python312Packages.six
 		python312Packages.pyasn1
 		python312Packages.pip				
+		python312Packages.virtualenv
     git
 		docker
 	  nixd
