@@ -31,9 +31,8 @@
        split row (char esep) |
        prepend /home/myuser/.apps |
        append /usr/bin/env
-
-       $env.EDITOR = (which hx)
        )
+       $env.EDITOR = (which hx | get path | to text)
        '';
     shellAliases = {
       vi = "hx";
