@@ -20,6 +20,7 @@
 		htop
 		neofetch
 		spotify
+		s-tui
 	];
 
 	virtualisation = {

@@ -44,6 +44,12 @@
 				enable = true;
 				enableNushellIntegration = true;
 			};
+			zellij = {
+				enable = true;
+				settings = {
+					default_shell = "nu";
+				};
+			};
 		};
 	};
 }
