@@ -16,6 +16,8 @@
 		freerdp
 		remmina
 		wireshark
+		protonvpn-cli
+		protonvpn-gui
   ];
 
 	services.resolved.enable = true;
