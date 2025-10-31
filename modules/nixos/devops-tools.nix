@@ -1,4 +1,4 @@
-{ config, pkgs, ... } : 
+{  pkgs, ... } : 
 
 {
 	environment.systemPackages = with pkgs; [
@@ -19,5 +19,8 @@
 		docker
 	  nixd
     nil
+		esptool
   ];
+
+	virtualisation.docker.enable = true;
 }

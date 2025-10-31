@@ -10,6 +10,7 @@
       "SUPER, E, exec, $fileManager"
       "SUPER, V, togglefloating,"
       "SUPER, R, exec, $menu"
+      "SUPER, L, exec, hyprlock"
       # Window Controls
       "SUPER, F, fullscreen,"
       # change which window is focused

@@ -5,7 +5,10 @@
     ./hacking-tools/hashcat.nix
   ];
 
-  nixpkgs.overlays = [ ( import ./hacking-tools/responder-overlay.nix ) (import ./hacking-tools/evil-winrm-overlay.nix)];
+  nixpkgs.overlays = [
+    # ( import ./hacking-tools/responder-overlay.nix )
+    (import ./hacking-tools/evil-winrm-overlay.nix)
+  ];
 
   environment.systemPackages = with pkgs; [
     john
@@ -19,7 +22,7 @@
     thc-hydra
     gobuster
     ffuf
-    responder
+    # responder
     wordlists
     (wordlists.override { lists = with pkgs; [ rockyou seclists];})
     proxychains

@@ -136,6 +136,11 @@
     ];
   };
 
+  # enable firewall:
+  networking.firewall = {
+    enable = true;
+  };
+
   
   
 
