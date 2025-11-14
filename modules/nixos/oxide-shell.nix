@@ -12,5 +12,6 @@
     ripgrep
     fzf
     zoxide
+    wezterm
   ];
 }
