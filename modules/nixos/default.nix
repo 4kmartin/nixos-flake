@@ -7,7 +7,7 @@
 		./oxide-shell.nix
 		./hacking-tools.nix
 		./devops-tools.nix
-		# ./peripheral.nix
+		./peripheral.nix
 		./screencapture.nix
 		./writing.nix
 	];

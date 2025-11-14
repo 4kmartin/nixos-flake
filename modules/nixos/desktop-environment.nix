@@ -29,8 +29,6 @@
 
   # add video drivers for displaylink
   services.xserver.videoDrivers = [
-    "nvidia"
-    "amdgpu"
     "displaylink"
     "modesetting"
   ];
