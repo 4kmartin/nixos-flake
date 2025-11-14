@@ -3,6 +3,7 @@
 {
   # programs.hyprland.enable = true;
   environment.systemPackages = with pkgs; [
+    displaylink
     waybar
     hyprlock
     wofi
@@ -24,5 +25,20 @@
         user = "greeter";
       };
     };
+  };
+
+  # add video drivers for displaylink
+  services.xserver.videoDrivers = [
+    "nvidia"
+    "amdgpu"
+    "displaylink"
+    "modesetting"
+  ];
+  
+
+  # setup evdi
+  boot = {
+    extraModulePackages = [ config.boot.kernelPackages.evdi ];
+    initrd.kernelModules = [ "evdi" ];
   };
 }
