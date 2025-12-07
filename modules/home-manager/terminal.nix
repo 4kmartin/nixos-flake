@@ -6,6 +6,7 @@
 		./terminal/nushell.nix
 		./terminal/starship.nix
 		./terminal/kitty.nix
+		./terminal/wezterm.nix
 	];
 
 	options.shell = with lib; {
